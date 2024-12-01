@@ -134,7 +134,7 @@ body {
 .action-button {
     color: var(--text-color);
     border: none;
-    font-size: 1.5svw;
+    font-size: 1.5rem;
     cursor: pointer;
     z-index: 3;
     background: none;
@@ -177,7 +177,7 @@ body {
 }
 
 .about-title {
-    font-size: 2.5svw;
+    font-size: 2rem;
     color: var(--text-color);
     transform: translateY(-100%);
 }
@@ -211,7 +211,7 @@ body {
     position: absolute;
     top: 70%;
     left: 0;
-    height: 0.1svh;
+    height: 0.3svh;
     background-color: var(--text-color);
     width: 0;
     transition: width 1.5s ease-in-out;
@@ -239,10 +239,11 @@ body {
     top: 45%;
     left: 55%;
     width: 40%;
+    margin-top: 1%;
 }
 
 .about-text {
-    font-size: 1svw;
+    font-size: 1rem;
     color: var(--text-color);
     transform: translateY(200%);
 }
@@ -286,7 +287,7 @@ main {
     align-items: center;
     max-width: 100svw;
     overflow: hidden;
-    height: 100svh;
+    height: 75svh;
     background-color: var(--background-overlay);
 }
 
@@ -328,9 +329,8 @@ main {
 
 .card {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     box-shadow: 0 4px 10px var(--shadow-color);
     height: 35svh;
     width: 35svw;
@@ -342,7 +342,7 @@ main {
     opacity: 1;
     position: absolute;
     user-select: none;
-} 
+}
 
 .carousel-img {
     display: flex;
@@ -351,18 +351,17 @@ main {
 
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-    z-index: 1; 
+    object-fit: cover;
+    z-index: 1;
     pointer-events: none;
     user-select: none;
-
 }
 
 .proj-name {
     display: flex;
     justify-content: center;
     z-index: 2;
-    font-size: 4rem; 
+    font-size: 4rem;
     text-align: center;
     margin: 0;
     padding: 5px;
@@ -373,8 +372,6 @@ main {
     width: 100%;
     height: 20%;
 }
-
-
 
 /* Active Card */
 .card[data-position='0'] {
@@ -511,9 +508,10 @@ main {
         display: none;
     }
 
-    .top-box{
+    .top-box {
         display: flex;
         flex-direction: column;
+        height: 100%;
     }
 
     .action-button-wrapper {
@@ -521,8 +519,10 @@ main {
     }
 
     .intro-header {
+        display: flex;
         height: 100svh;
         width: 100svw;
+        flex-grow: 1;
     }
 
     .hidden-content {
@@ -535,8 +535,8 @@ main {
         flex-direction: column;
         align-items: center;
         max-width: 100svw;
-        overflow: hidden;
         height: 100svh;
+        flex-grow: 1;
     }
 
     .about-title-wrapper-m {
@@ -552,21 +552,18 @@ main {
         color: var(--text-color);
     }
     .about-line-m {
-
         height: 0.3svh;
         width: 25svw;
         background: var(--text-color);
     }
 
     .about-img-m {
-        
         height: 20svw;
         width: 50svw;
     }
 
     .about-text-wrapper-m {
         padding: 10%;
-
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -583,7 +580,7 @@ main {
     }
 
     .carousel-box {
-        height: 65svh;
+        height: 100%;
     }
 
     .carousel-title {
@@ -600,9 +597,8 @@ main {
 
     .carousel {
         width: 100svw;
-        height: 50svh;
+        height: 65svh;
     }
-
 
     .card[data-position='0'] {
         transform: translateX(0) scale(1);
@@ -614,7 +610,6 @@ main {
         width: 60%;
         height: 80%;
         max-width: 60%;
-
     }
 
     .proj-name {
