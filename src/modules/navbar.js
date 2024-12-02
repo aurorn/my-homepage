@@ -1,7 +1,7 @@
 export function initializeNavbar() {
     const navbarItems = document.querySelectorAll('.navbar-item')
     const sections = document.querySelectorAll(
-        '#welcome, #projects, #technology'
+        '#welcome, #projects, #technology, #contact'
     )
 
     function updateActiveSection() {
