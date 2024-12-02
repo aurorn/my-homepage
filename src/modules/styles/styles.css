@@ -128,7 +128,7 @@ body {
 
 .home {
     top: 51%;
-    left: 10%;
+    left: 15%;
 }
 
 .action-button {
@@ -166,7 +166,7 @@ body {
     position: relative;
     height: auto;
     width: 20svw;
-    right: 70%;
+    right: 10svw;
     border-radius: 30%;
 }
 
@@ -213,12 +213,11 @@ body {
     left: 0;
     height: 0.3svh;
     background-color: var(--text-color);
-    width: 0;
     transition: width 1.5s ease-in-out;
 }
 
 .about-title-wrapper.active .about-underline {
-    width: calc(100% + 50%);
+    width: 30svw;
 }
 
 .about-title-underline.reverse {
@@ -287,8 +286,7 @@ main {
     align-items: center;
     max-width: 100svw;
     overflow: hidden;
-    height: 75svh;
-    background-color: var(--background-overlay);
+    height: 100svh;
 }
 
 .carousel-title-container {
@@ -341,14 +339,13 @@ main {
         opacity 0.3s ease;
     opacity: 1;
     position: absolute;
-    user-select: none;
+    
 }
 
 .carousel-img {
     display: flex;
     justify-content: center;
     position: absolute;
-
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -371,6 +368,7 @@ main {
     background: #000000c2;
     width: 100%;
     height: 20%;
+    user-select: none;
 }
 
 /* Active Card */
@@ -417,12 +415,10 @@ main {
     justify-content: center;
     align-items: center;
     gap: 3%;
-    flex-grow: 1;
+
 }
 
 .tech-box {
-    height: 90%;
-    width: 90%;
     display: flex;
     flex-direction: column;
 }
@@ -440,12 +436,17 @@ main {
     margin: 5%;
 }
 
-.tech-title-line {
-    height: 0.1svh;
+.tech-title-line,
+.tech-title-line-m {
+    height: 0.3svh;
     background-color: var(--text-color);
-    width: 50%;
+    width: 50svw;
     margin: 5%;
     margin-left: 0%;
+}
+
+.tech-title-line-m {
+    display: none;
 }
 
 .tech-container {
@@ -459,7 +460,7 @@ main {
     flex-direction: row;
     background-color: rgba(0, 0, 0, 0.452);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    width: 40%;
+    width: 40svw;
     padding: 5%;
     justify-content: center;
     align-items: center;
@@ -500,6 +501,45 @@ main {
 
 .hidden {
     display: none;
+}
+
+.contact-wrapper {
+    width: 100svw;
+    height: 50svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5%;
+}
+
+.contact-text {
+    color: var(--text-color);
+    font-size: 2rem;
+    padding: 2svw;
+    width: 8svw;
+    height: auto;
+    border-right: solid 1px var(--text-color);
+}
+
+.social-hub {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5svh;
+}
+
+.con-icon {
+    height: auto;
+    width: 4svw;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    fill: var(--text-color);
+}
+
+.con-icon:hover {
+    transform: scale(1.2);
+    cursor: pointer;
 }
 
 /* Mobile Styles */
@@ -614,6 +654,10 @@ main {
 
     .proj-name {
         font-size: 2rem;
+    }
+
+    .tech-title-line-m {
+        display: block;
     }
 
     .tech-box {
